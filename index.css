@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-box{
+    background: #1B244A;
+    height: 420px;
+    width: 575px;
+}
+
+.container {
+    height: 385px;
+    width: 575px;
+    background: #1B244A;
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 36px;
+    color: white;
+    margin-bottom: 21px;
+}
+
+.box {
+    width: 155px;
+    height: 120px;
+    background: #080001;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 26px;
+}
+
+.score {
+    font-family: Cursed Timer ULiL;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 127px;
+    color: #F94F6D;
+    text-align: center;
+    width: 100%;
+}
+
+.score-button {
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-score {
+    display: flex;
+    gap: .6rem
+}
+
+.buttonPlusScore {
+    font-family: 'Cursed Timer ULiL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #9AABD8;
+    background: none;
+    border: none;
+}
+
+.more-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-NewGame{
+    font-family: 'Cursed Timer ULiL';
+    background: none;
+    color: #9AABD8;
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    font-size: 15px;
+    position: absolute;
+    margin-top: -3rem;
+    width: 6rem;
+    padding: .5rem;
+}
+
+@media (max-width: 480px) {
+    .main-box{
+        height: 300px;
+        width: 400px;
+    }
+
+    .container{
+        height: 350px;
+        width: 400px;
+    }
+}

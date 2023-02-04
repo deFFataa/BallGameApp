@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Game App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="flex">
+        <div class="main-box">
+            <div class="container">
+                <div class="content">
+                    <h2 class="home">HOME</h2>
+                    <div class="box">
+                        <p class="score" id="homeScore">0</p>
+                    </div>
+                    <div class="flex-score">
+                        <div class="score-button">
+                            <button type="button" onclick="add1H()" class="buttonPlusScore">+1</button>
+                        </div>
+                        <div class="score-button">
+                            <button type="button" onclick="add2H()" class="buttonPlusScore">+2</button>
+                        </div>
+                        <div class="score-button">
+                            <button type="button" onclick="add3H()" class="buttonPlusScore">+3</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <h2 class="home">GUEST</h2>
+                    <div class="box">
+                        <p class="score" id="guestScore">0</p>
+                    </div>
+                    <div class="flex-score">
+                        <div class="score-button">
+                            <button type="button" onclick="add1G()" class="buttonPlusScore">+1</button>
+                        </div>
+                        <div class="score-button">
+                            <button type="button" onclick="add2G()" class="buttonPlusScore">+2</button>
+                        </div>
+                        <div class="score-button">
+                            <button type="button" onclick="add3G()" class="buttonPlusScore">+3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more-buttons">
+                <button type="button" onclick="newGame()" class="btn-NewGame">New Game</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let homeScore = document.getElementById("homeScore")
+        let guestScore = document.getElementById("guestScore")
+        let homeTempScoreHome = 0
+        let homeTempScoreGuest = 0
+        homeScore.style.textShadow = "none"
+        guestScore.style.textShadow = "none"
+
+        function add1H() {
+            homeScore.textContent = homeTempScoreHome += 1
+            if (homeScore.textContent > guestScore.textContent) {
+                homeScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                guestScore.style.textShadow = "none"
+            }
+            else if(guestScore.textContent == homeScore.textContent){
+                homeScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                guestScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+            }
+        }
+        function add2H() {
+            homeScore.textContent = homeTempScoreHome += 2
+            if (homeScore.textContent > guestScore.textContent) {
+                homeScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                guestScore.style.textShadow = "none"
+            }
+            else if(guestScore.textContent == homeScore.textContent){
+                homeScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                guestScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+            }
+        }
+
+        function add3H() {
+            homeScore.textContent = homeTempScoreHome += 3
+            if (homeScore.textContent > guestScore.textContent) {
+                homeScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                guestScore.style.textShadow = "none"
+            }
+            else if(guestScore.textContent == homeScore.textContent){
+                homeScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                guestScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+            }
+        }
+
+        function add1G() {
+            guestScore.textContent = homeTempScoreGuest += 1
+            if (guestScore.textContent > homeScore.textContent) {
+                guestScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                homeScore.style.textShadow = "none"
+            }
+            else if(guestScore.textContent == homeScore.textContent){
+                homeScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                guestScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+            }
+        }
+
+        function add2G() {
+            guestScore.textContent = homeTempScoreGuest += 2
+            if (guestScore.textContent > homeScore.textContent) {
+                guestScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                homeScore.style.textShadow = "none"
+            }
+            else if(guestScore.textContent == homeScore.textContent){
+                homeScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                guestScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+            }
+        }
+
+        function add3G() {
+            guestScore.textContent = homeTempScoreGuest += 3
+            if (guestScore.textContent > homeScore.textContent) {
+                guestScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                homeScore.style.textShadow = "none"
+            }
+            else if(guestScore.textContent == homeScore.textContent){
+                homeScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+                guestScore.style.textShadow = "rgb(255 107 133) 0px 0px 18px"
+            }
+        }
+    
+        function newGame() {
+            homeTempScoreGuest = 0
+            homeTempScoreHome = 0
+            guestScore.textContent = homeTempScoreGuest
+            homeScore.textContent = homeTempScoreHome
+        }
+    </script>
+</body>
+
+</html>
